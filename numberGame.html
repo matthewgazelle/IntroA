@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matt G's Super Fun Amazing Game</title>
+    <style>
+      #player {
+        color: #26a7e0;
+        font-size: 200%;
+        font-family: Ariel;
+        font-weight: bold;
+        position: relative;
+        left: 50px;
+      }
+      #computer {
+        color:#2e7682;
+        font-size: 200%;
+        font-family: Ariel;
+        font-weight: bold;
+        position: relative;
+        left: 50px;
+      }
+    </style>
+  </head>
+<body>
+<h1>Let's see how you did!</h1>
+<p>You chose:</p><p id="player"></p>
+<p>The computer chose:</p><p id="computer"></p>
+<p id="result"></p>
+<img src="http://www.humoar.com/wp-content/uploads/2015/09/can-you-hangout-no-its-my-dogs-birthday.jpg" alt="Party Dog">
+<h3>Thanks for playing!!!</h3>
+
+<script>
+var userNumber = prompt("Pick a Number Between 1 and 5");
+document.getElementById("player").innerHTML= userNumber;
+var randomNumber = Math.round(Math.random()*4 + 1);
+document.getElementById("computer").innerHTML= randomNumber;
+if (userNumber > 0 & userNumber < 6) {
+  if (userNumber == randomNumber) {
+    document.getElementById("result").innerHTML = "Great Job! You got It!";
+  } else {
+    document.getElementById("result").innerHTML = "Whoops! Try again, better luck next time!";
+  }
+} else {
+  document.getElementById("result").innerHTML= "You entered a number that wasn't between 1 and 5! Try again!"
+}
+</script>
+</body>
+
+</html>
