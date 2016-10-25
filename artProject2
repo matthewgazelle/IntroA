@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Matt G's modern art
+  </title>
+</head>
+<body>
+    <canvas id="myCanvas" style = "border:3px solid #0000"></canvas>
+    
+    
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      
+      //model, order goes top down left right
+      // ctx.beginPath();
+      // ctx.fillStyle = ;
+      // ctx.fillRect();
+      
+      var maxX = prompt("How wide is your painting?");
+      var maxY = prompt("How tall is your painting?");
+      
+      canvas.width = maxX;
+      canvas.height = maxY;
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#ffffe6";
+      ctx.fillRect(0*maxX,0*maxY,.25*maxX,.35*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(0*maxX,.35*maxY,.25*maxX,.025*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#ffffe6";
+      ctx.fillRect(0*maxX,.375*maxY,.25*maxX,.35*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(0*maxX,.725*maxY,1*maxX,.025*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#000099";
+      ctx.fillRect(0*maxX,.75*maxY,.25*maxX,.25*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(.25*maxX,0*maxY,.025*maxX,.725*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(.25*maxX,.75*maxY,.025*maxX,.25*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#b30000";
+      ctx.fillRect(.275*maxX,0*maxY,.725*maxX,.725*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#ffffe6";
+      ctx.fillRect(.275*maxX,.75*maxY,.65*maxX,.25*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(.925*maxX,.75*maxY,.025*maxX,.25*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#ffffe6";
+      ctx.fillRect(.95*maxX,.75*maxY,.05*maxX,.1125*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "black";
+      ctx.fillRect(.95*maxX,.8625*maxY,.05*maxX,.025*maxY);
+      
+      ctx.beginPath();
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(.95*maxX,.8875*maxY,.05*maxX,.1125*maxY);
+      
+      
+    </script>
+</body>
+</html>
