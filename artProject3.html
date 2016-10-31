@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Matt G's Abhorrently Amazing Art
+    </title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400" style="border:3px solid #000000">
+    </canvas>
+    
+    
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      
+      var x = 200
+      
+      var grd = ctx.createRadialGradient(200,200,200,200,200,75);
+      grd.addColorStop(0,"pink");
+      // grd.addColorStop(0.25,"purple");
+      // grd.addColorStop(0.5,"blue");
+      // grd.addColorStop(0.75,"green");
+      grd.addColorStop(1,"purple");
+      
+      ctx.beginPath();
+      ctx.fillStyle = "red";
+      ctx.fillRect(0,0,400,400)
+      
+      ctx.beginPath();
+      ctx.fillStyle = "#F39C12";
+      ctx.fillRect(5,5,390,390);
+      
+      for(x; x>10; x=x-10) {
+      ctx.beginPath();
+      ctx.arc(200,200,x,0,2*Math.PI);
+      ctx.lineWidth = "4";
+      ctx.fillStyle = "#ffff99";
+      ctx.fill();
+      ctx.stroke();
+      };
+      
+      ctx.beginPath();
+      ctx.arc(100,100,100,0,2*Math.PI);
+      ctx.fillStyle = grd;
+      ctx.fill();
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.arc(300,100,100,0,2*Math.PI);
+      ctx.fillStyle = grd;
+      ctx.fill();
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.arc(100,300,100,0,2*Math.PI);
+      ctx.fillStyle = grd;
+      ctx.fill();
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.arc(300,300,100,0,2*Math.PI);
+      ctx.fillStyle = grd;
+      ctx.fill();
+      ctx.stroke();
+      
+      // ctx.beginPath();
+      // ctx.moveTo(0,0);
+      // ctx.lineTo(400,400);
+      // ctx.lineWidth = "2";
+      // ctx.strokeStyle = "purple";
+      // ctx.stroke();
+      
+      
+      // ctx.beginPath();
+      // ctx.moveTo(400,0);
+      // ctx.lineTo(0,400);
+      // ctx.strokeStyle = "purple";
+      // ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(200,0);
+      ctx.lineTo(200,400);
+      ctx.lineWidth = "1.5";
+      ctx.strokeStyle = "purple";
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(0,200);
+      ctx.lineTo(400,200);
+      ctx.strokeStyle = "purple";
+      ctx.stroke();
+      
+    </script>
+  </body>
+</html>
